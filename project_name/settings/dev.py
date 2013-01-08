@@ -67,3 +67,8 @@ MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 ########## END TOOLBAR CONFIGURATION
+
+########## CRISPY FORMS CONFIGURATION
+CRISPY_FAIL_SILENTLY = False
+########## END CRISPY FORMS CONFIGURATION
+
