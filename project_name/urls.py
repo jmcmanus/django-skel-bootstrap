@@ -1,10 +1,8 @@
 from django.contrib import admin
 from django.conf.urls.defaults import patterns, include, url
 
-
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/admin/#hooking-adminsite-instances-into-your-urlconf
 admin.autodiscover()
-
 
 # See: https://docs.djangoproject.com/en/dev/topics/http/urls/
 urlpatterns = patterns('',
@@ -14,4 +12,8 @@ urlpatterns = patterns('',
 
     # Password reset urls
     url(r'', include('password_reset.urls')),
+
+    # Main page for your app. Change or modify this.
+    url(r'^/?$', '{{ project_name }}.views.index', name='index'),
 )
+
